@@ -16,6 +16,7 @@
     <div class="bg bg3"></div>
       <section class="Contacts_section">
         <div class="Contacts">
+          <h1>Contacts</h1>
           <ul>
             <li><img src="./images/email.png" alt="email" height="24" width="24">roma.marhatok@yandex.by</li>
             <li><a href="https://github.com/roma-marhatok-45tp" title="Github"><img src="./images/github-sign.png" alt="github" height="24" width="24">Github</a></li>
@@ -39,18 +40,16 @@
           <h2><img src="./images/web-programming.png" alt="WebPNG" height="24" width="24">Code</h2>
           <pre class="overflowe-code">
             <code>
-            function getParticipants(handshakes) {
-                let array = new Array(1).fill(1);
-                let ArrayHandshakes = 0;
-                while (handshakes > ArrayHandshakes) {
-                    ArrayHandshakes = array.reduce((sum, item) => {
-                    return sum + item;
-                });
-                let add = array[array.length - 1];
-                    array.push(++add);
-                    }
-                return array.length;
-            }
+              from functools import reduce
+              def get_participants(handshakes):
+                  result_list = [1]
+                  ArrayHandshakes = 0
+                  while (handshakes > ArrayHandshakes):
+                      ArrayHandshakes = reduce(lambda sum, item: sum + item, result_list)
+                      add = result_list[len(result_list) - 1]
+                      add += 1
+                      result_list.append(add)
+                  return len(result_list)
             </code>
         </pre>
         </div>
@@ -79,7 +78,7 @@
             <h2><img src="./images/book.png" alt="Book Png" height="24" width="24">Education</h2>    
           <ul>
             <li><span>Collage in progress</span></li>
-            <li><span>Stepik online curses</span> </li>
+            <li><span>Stepik online courses</span> </li>
             <li><span>self-training</span></li>
           </ul>
         </div>
